@@ -8,20 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		2B5010771BB9B7FF00B42ABF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5010761BB9B7FF00B42ABF /* AppDelegate.swift */; };
-		2B5010791BB9B7FF00B42ABF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5010781BB9B7FF00B42ABF /* ViewController.swift */; };
 		2B50107C1BB9B7FF00B42ABF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B50107A1BB9B7FF00B42ABF /* Main.storyboard */; };
 		2B50107E1BB9B7FF00B42ABF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B50107D1BB9B7FF00B42ABF /* Assets.xcassets */; };
 		2B5010811BB9B7FF00B42ABF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B50107F1BB9B7FF00B42ABF /* LaunchScreen.storyboard */; };
+		2B50108B1BB9BBB500B42ABF /* GooniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50108A1BB9BBB500B42ABF /* GooniesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		2B50108D1BB9BC0D00B42ABF /* Goonies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50108C1BB9BC0D00B42ABF /* Goonies.swift */; settings = {ASSET_TAGS = (); }; };
+		2B5010911BB9C78C00B42ABF /* GoonieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5010901BB9C78C00B42ABF /* GoonieTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		2B5010731BB9B7FF00B42ABF /* GitHubGoonies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubGoonies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B5010761BB9B7FF00B42ABF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B5010781BB9B7FF00B42ABF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2B50107B1BB9B7FF00B42ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2B50107D1BB9B7FF00B42ABF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B5010801BB9B7FF00B42ABF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B5010821BB9B7FF00B42ABF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B50108A1BB9BBB500B42ABF /* GooniesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooniesTableViewController.swift; sourceTree = "<group>"; };
+		2B50108C1BB9BC0D00B42ABF /* Goonies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goonies.swift; sourceTree = "<group>"; };
+		2B5010901BB9C78C00B42ABF /* GoonieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoonieTableViewCell.swift; path = ../GoonieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,7 +59,9 @@
 			isa = PBXGroup;
 			children = (
 				2B5010761BB9B7FF00B42ABF /* AppDelegate.swift */,
-				2B5010781BB9B7FF00B42ABF /* ViewController.swift */,
+				2B50108A1BB9BBB500B42ABF /* GooniesTableViewController.swift */,
+				2B5010901BB9C78C00B42ABF /* GoonieTableViewCell.swift */,
+				2B50108C1BB9BC0D00B42ABF /* Goonies.swift */,
 				2B50107A1BB9B7FF00B42ABF /* Main.storyboard */,
 				2B50107D1BB9B7FF00B42ABF /* Assets.xcassets */,
 				2B50107F1BB9B7FF00B42ABF /* LaunchScreen.storyboard */,
@@ -134,7 +140,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2B5010791BB9B7FF00B42ABF /* ViewController.swift in Sources */,
+				2B5010911BB9C78C00B42ABF /* GoonieTableViewCell.swift in Sources */,
+				2B50108D1BB9BC0D00B42ABF /* Goonies.swift in Sources */,
+				2B50108B1BB9BBB500B42ABF /* GooniesTableViewController.swift in Sources */,
 				2B5010771BB9B7FF00B42ABF /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
