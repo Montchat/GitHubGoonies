@@ -14,6 +14,7 @@
 		2B50108B1BB9BBB500B42ABF /* GooniesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50108A1BB9BBB500B42ABF /* GooniesTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		2B50108D1BB9BC0D00B42ABF /* Goonies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B50108C1BB9BC0D00B42ABF /* Goonies.swift */; settings = {ASSET_TAGS = (); }; };
 		2B5010911BB9C78C00B42ABF /* GoonieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B5010901BB9C78C00B42ABF /* GoonieTableViewCell.swift */; settings = {ASSET_TAGS = (); }; };
+		2B90A9C91BBAC56B00CC748B /* GooniesDetailViewControllerTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B90A9C81BBAC56B00CC748B /* GooniesDetailViewControllerTableViewController.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		2B50108A1BB9BBB500B42ABF /* GooniesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooniesTableViewController.swift; sourceTree = "<group>"; };
 		2B50108C1BB9BC0D00B42ABF /* Goonies.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Goonies.swift; sourceTree = "<group>"; };
 		2B5010901BB9C78C00B42ABF /* GoonieTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GoonieTableViewCell.swift; path = ../GoonieTableViewCell.swift; sourceTree = "<group>"; };
+		2B90A9C81BBAC56B00CC748B /* GooniesDetailViewControllerTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooniesDetailViewControllerTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 			children = (
 				2B5010761BB9B7FF00B42ABF /* AppDelegate.swift */,
 				2B50108A1BB9BBB500B42ABF /* GooniesTableViewController.swift */,
+				2B90A9C81BBAC56B00CC748B /* GooniesDetailViewControllerTableViewController.swift */,
 				2B5010901BB9C78C00B42ABF /* GoonieTableViewCell.swift */,
 				2B50108C1BB9BC0D00B42ABF /* Goonies.swift */,
 				2B50107A1BB9B7FF00B42ABF /* Main.storyboard */,
@@ -144,6 +147,7 @@
 				2B50108D1BB9BC0D00B42ABF /* Goonies.swift in Sources */,
 				2B50108B1BB9BBB500B42ABF /* GooniesTableViewController.swift in Sources */,
 				2B5010771BB9B7FF00B42ABF /* AppDelegate.swift in Sources */,
+				2B90A9C91BBAC56B00CC748B /* GooniesDetailViewControllerTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +295,7 @@
 				2B5010871BB9B7FF00B42ABF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

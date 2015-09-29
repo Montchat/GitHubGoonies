@@ -1,19 +1,18 @@
 //
-//  GooniesTableViewController.swift
+//  GooniesDetailViewControllerTableViewController.swift
 //  GitHubGoonies
 //
-//  Created by Joe E. on 9/28/15.
+//  Created by Joe E. on 9/29/15.
 //  Copyright © 2015 Joe E. All rights reserved.
 //
 
 import UIKit
 
-class GooniesTableViewController: UITableViewController {
+class GooniesDetailViewControllerTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
@@ -27,71 +26,27 @@ class GooniesTableViewController: UITableViewController {
 
     // MARK: - Table view data source
 
-    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return users.count
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        // #warning Incomplete implementation, return the number of sections
+        return 0
     }
 
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
+        return 0
+    }
 
+    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("GoonieCell", forIndexPath: indexPath) as! GoonieTableViewCell
-        
-        let user = users[indexPath.row]
-        
-        if let username = user["login"] as? String {
-            cell.usernameLabel?.text = username
-            
-        }
-        
-        if let avatarURL = user["avatar_url"] as? String {
-            cell.avatarImageView.hidden = false
-            if let url = NSURL(string: avatarURL) {
-                if let data = NSData(contentsOfURL: url) { // making a server call and collecting data. you are using data at this point
-                    if let image = UIImage(data: data) { // creating a new image object based off that data so that you can create something that you can see
-                        cell.avatarImageView.image = image //setting the avatarimage to the image obtained by the data
-                        
-                    }
-                    
-                }
-                
-            }
-            
-        } else {
-            cell.avatarImageView.hidden = true
-            
-        }
-        
-        //NewStuff
-        
-        //Normal
-        //new class GooniesDetailViewController
-        
-        //layout the detail view controller to display all of the simple & full detail info
-        //add a plus button to the top right of the navigationbar on the Goonies view
-        
-        //Hard
-        //add a new view controller to storyboard below the Goonies viewcontroller
-        //coonect the plus button with a present segue
-        //add a textfield, submit button to presented viewController
-        // when you hit submit cancel button that dismisses the presented viewcontroller
-        
-        //simple detail
-        //avatar
-        //username
-        
-        //full detail
-        
-        //full name
-        //location
-        //followers
-        //following
-        //repo count
-        //gist count
+        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+
+        // Configure the cell...
 
         return cell
     }
+    */
 
-    /*r
+    /*
     // Override to support conditional editing of the table view.
     override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
         // Return false if you do not want the specified item to be editable.
