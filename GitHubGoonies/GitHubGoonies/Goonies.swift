@@ -11,7 +11,7 @@ import Foundation
 let API_ROOT = "https://api.github.com"
 let myProfileURL = API_ROOT + "users/Montchat"
 
-let users:[[String:AnyObject?]] = [
+var users:[[String:AnyObject?]] = [
     
     [
         
@@ -49,3 +49,47 @@ let users:[[String:AnyObject?]] = [
     ]
     
 ]
+
+class GitHubRequest: NSObject {
+    class func requestUserInfo(username:String, completion: (responseInfo: AnyObject?) -> ()) {
+        /* completion block is completion: (responseInfo: AnyObject?) -> () */
+        let userURL = API_ROOT + "/users/" + username
+        print(userURL)
+        
+        if let url = NSURL(string: userURL) {
+            let request = NSURLRequest(URL: url)
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
+               
+                /* the idea of a closure is that you can build data around the data that you get when the request is done
+                we are going to get data about the user, put it in a dictionary, and then use that data to append it to our array
+                
+                with the data that comes back, we are going to have to get it to come into
+                */
+                
+                if let data = data {
+                    do {
+                        let info = try? NSJSONSerialization.JSONObjectWithData(data, options:
+                            NSJSONReadingOptions.MutableContainers)
+                        print(info)
+                        
+                        completion(responseInfo: info)
+                        
+                    } catch {
+                        print(error)
+                    }
+                    
+                }
+                
+            })
+            
+            task.resume()
+        }
+
+    }
+    
+    class func request(info: [String: AnyObject], completion: (responseInfo: AnyObject?) -> ()) {
+        
+        
+    }
+    
+}

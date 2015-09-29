@@ -56,16 +56,22 @@
                             <outlet property="delegate" destination="lGk-N5-CZm" id="mWS-yE-1Cp"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Goonies" id="Exd-ta-Ea9"/>
+                    <navigationItem key="navigationItem" title="Goonies" id="Exd-ta-Ea9">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="K18-bA-bph">
+                            <connections>
+                                <segue destination="TdO-hs-P8S" kind="presentation" id="JOs-YL-YtY"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lMy-Em-T6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1282" y="559"/>
         </scene>
-        <!--View Controller-->
+        <!--Goonie Detail View Controller-->
         <scene sceneID="05r-aR-1J0">
             <objects>
-                <viewController id="tg9-6R-Ao1" sceneMemberID="viewController">
+                <viewController id="tg9-6R-Ao1" customClass="GoonieDetailViewController" customModule="GitHubGoonies" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Z3g-42-ibC"/>
                         <viewControllerLayoutGuide type="bottom" id="avS-cY-WS8"/>
@@ -73,12 +79,86 @@
                     <view key="view" contentMode="scaleToFill" id="EJg-wA-PTI">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhQ-pa-j6f">
+                                <rect key="frame" x="8" y="72" width="89" height="89"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Full Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2r7-Ex-PBI">
+                                <rect key="frame" x="119" y="86" width="481" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Location" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3O-fK-QG6">
+                                <rect key="frame" x="20" y="187" width="481" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nd2-rj-9at">
+                                <rect key="frame" x="20" y="253" width="481" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repo Count" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sx-2t-HeL">
+                                <rect key="frame" x="20" y="322" width="481" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="username" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5m-mo-5Uw">
+                                <rect key="frame" x="119" y="124" width="481" height="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem title="Item" id="pHr-Ax-1eQ"/>
+                    </toolbarItems>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="avatarImageView" destination="PhQ-pa-j6f" id="TGa-Mk-soa"/>
+                        <outlet property="goonieEmailLabel" destination="Nd2-rj-9at" id="hEY-Eg-rfB"/>
+                        <outlet property="goonieFullNameLabel" destination="2r7-Ex-PBI" id="You-Co-pAl"/>
+                        <outlet property="goonieLocationLabel" destination="c3O-fK-QG6" id="e06-XP-Fhb"/>
+                        <outlet property="goonieRepoCount" destination="8sx-2t-HeL" id="hAv-9r-yZv"/>
+                        <outlet property="goonieUsernameLabel" destination="t5m-mo-5Uw" id="HR2-LQ-AbE"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w1i-8L-cC3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1987" y="559"/>
+        </scene>
+        <!--Create Goonies View Controller-->
+        <scene sceneID="L4F-KD-UJn">
+            <objects>
+                <viewController id="M2Z-SR-xyf" customClass="CreateGooniesViewController" customModule="GitHubGoonies" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IUO-OR-t75"/>
+                        <viewControllerLayoutGuide type="bottom" id="c4J-kA-1xm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="YaK-MU-1ff">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="hQq-SH-o1G">
+                        <barButtonItem key="leftBarButtonItem" systemItem="stop" id="9Vr-fD-DBs">
+                            <connections>
+                                <action selector="cancelCreate:" destination="M2Z-SR-xyf" id="6Qb-UW-3vN"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AV2-uf-Ppl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2780" y="1252"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="muP-Gc-WsM">
@@ -95,6 +175,24 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="su1-PQ-xd9" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="623" y="559"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="hp7-y3-TQc">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TdO-hs-P8S" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="755-bP-cBC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="M2Z-SR-xyf" kind="relationship" relationship="rootViewController" id="0a5-jI-05N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0C-c0-STP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1864" y="1252"/>
         </scene>
     </scenes>
 </document>
