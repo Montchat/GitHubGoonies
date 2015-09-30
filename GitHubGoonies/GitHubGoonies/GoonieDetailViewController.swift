@@ -19,7 +19,6 @@ class GoonieDetailViewController: UIViewController {
     
     var userIndex: Int!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         

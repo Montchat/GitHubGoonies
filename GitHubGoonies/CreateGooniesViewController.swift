@@ -18,11 +18,8 @@ class CreateGooniesViewController: UIViewController {
         super.viewDidLoad()
         
         GitHubRequest.requestUserInfo("Montchat") { (responseInfo) -> () in
-            
             if let user = responseInfo as? [String:AnyObject] {
-
                 users.append(user)
-                
                 
             }
             
